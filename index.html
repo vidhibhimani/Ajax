@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>XML USE</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Tanishq</h1>
+
+    
+    <button type="button" onclick="Earrings()">Diamond Earrings</button>
+    <button type="button" onclick="Ring()">Diamond Ring</button>
+    <button type="button" onclick="Pendant()">Diamond Pendant</button>
+</div>
+
+<div class="container2" id="output"></div>
+</body>
+<script>
+    
+        function Earrings() {
+            var request =new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('output').innerHTML = this.responseText;
+                }
+            };
+            request.open("GET", "diamond-earrings.html", true);
+            request.send();
+        }
+
+        function Ring() {
+            var request =new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('output').innerHTML = this.responseText;
+                }
+            };
+            request.open("GET", "diamond-ring.html", true);
+            request.send();
+        }
+
+        function Pendant() {
+            var request =new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('output').innerHTML = this.responseText;
+                }
+            };
+            request.open("GET", "diamond-pendant.html", true);
+            request.send();
+        }
+</script>
+ 
+</html>
